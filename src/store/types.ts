@@ -1,0 +1,30 @@
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  imageUrl: string;
+  inStock: boolean;
+}
+
+export interface ProductState {
+  items: Product[];
+  status: "idle" | "loading" | "succeeded" | "failed";
+  error: string | null;
+  filter: {
+    search: string;
+    sort: "name" | "price";
+  };
+}
+
+export interface CartItem {
+  id: number;
+  name: string;
+  price: number;
+  imageUrl: string;
+  quantity: number;
+}
+
+export interface CartState {
+  items: CartItem[];
+}
