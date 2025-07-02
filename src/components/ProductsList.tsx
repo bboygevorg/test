@@ -1,21 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../hooks";
 import { fetchProducts } from "../store/productsSlice";
 import { addToCart } from "../store/cartSlice";
+import ProductEditor from "./ProductEditor";
+import { selectFilteredProducts } from "../store/selector";
+import Pagination from "./Pagination";
+import { Product } from "../store/types";
 
 const ProductsList: React.FC = () => {
   const dispatch = useAppDispatch();
-  const { items, status, error, filter } = useAppSelector(
-    (state) => state.products
-  );
-
-  const filtered = [...items]
-    .filter((p) => p.name.toLowerCase().includes(filter.search.toLowerCase()))
-    .sort((a, b) => {
-      if (filter.sort === "name") return a.name.localeCompare(b.name);
-      if (filter.sort === "price") return a.price - b.price;
-      return 0;
-    });
+  const product = useAppSelector(selectFilteredProducts);
+  const [editongProduct, setEditingProduct] = useState<Product | null>(null);
 
   useEffect(() => {
     dispatch(fetchProducts());
@@ -25,7 +20,7 @@ const ProductsList: React.FC = () => {
     <div>
       <h2>Products</h2>
       <ul style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-        {filtered.map((product) => (
+        {product.map((product) => (
           <li
             key={product.id}
             style={{ border: "1px solid #ccc", padding: "10px", width: 200 }}
@@ -41,10 +36,18 @@ const ProductsList: React.FC = () => {
             <strong>{product.price} ₽</strong>
             <button onClick={() => dispatch(addToCart(product))}>
               В корзину
-            </button>
+            </button>{" "}
+            <button onClick={() => setEditingProduct(product)}>Edit</button>
           </li>
         ))}
+        <Pagination />
       </ul>
+      {editongProduct && (
+        <ProductEditor
+          product={editongProduct}
+          onClose={() => setEditingProduct(null)}
+        />
+      )}
     </div>
   );
 };

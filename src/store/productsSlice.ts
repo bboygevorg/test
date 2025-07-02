@@ -1,9 +1,9 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { Product, ProductState } from "./types";
-import { fetchProducts as fetchProductsAPI } from "../api/fetchProducts";
+import { fetchProductsAPI as fetchProductsAPI } from "../api/fetchProducts";
 
 export const fetchProducts = createAsyncThunk<Product[]>(
-  "product/fetchProducts",
+  "product/fetchProductsAPI",
   async () => {
     const response = await fetchProductsAPI();
     return response;
@@ -24,11 +24,12 @@ const productsSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
-    setSearch(state, action: PayloadAction<string>) {
-      state.filter.search = action.payload;
-    },
-    setSort(state, action: PayloadAction<"name" | "price">) {
-      state.filter.sort = action.payload;
+    updateProduct(state, action: PayloadAction<Product>) {
+      const index = state.items.findIndex((p) => p.id === action.payload.id);
+
+      if (index !== -1) {
+        state.items[index] = action.payload;
+      }
     },
   },
   extraReducers: (builder) => {
@@ -52,5 +53,5 @@ const productsSlice = createSlice({
   },
 });
 
-export const { setSearch, setSort } = productsSlice.actions;
+export const { updateProduct } = productsSlice.actions;
 export default productsSlice.reducer;
