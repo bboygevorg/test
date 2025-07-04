@@ -1,0 +1,163 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "price": 10.99,
+      "description": "Description for product 1",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": true
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "price": 12.5,
+      "description": "Description for product 2",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": true
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "price": 8.75,
+      "description": "Description for product 3",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": false
+    },
+    {
+      "id": 4,
+      "name": "Product 4",
+      "price": 15.0,
+      "description": "Description for product 4",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": true
+    },
+    {
+      "id": 5,
+      "name": "Product 5",
+      "price": 22.3,
+      "description": "Description for product 5",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": true
+    },
+    {
+      "id": 6,
+      "name": "Product 6",
+      "price": 7.99,
+      "description": "Description for product 6",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": true
+    },
+    {
+      "id": 7,
+      "name": "Product 7",
+      "price": 13.49,
+      "description": "Description for product 7",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": false
+    },
+    {
+      "id": 8,
+      "name": "Product 8",
+      "price": 18.2,
+      "description": "Description for product 8",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": true
+    },
+    {
+      "id": 9,
+      "name": "Product 9",
+      "price": 11.1,
+      "description": "Description for product 9",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": true
+    },
+    {
+      "id": 10,
+      "name": "Product 10",
+      "price": 9.99,
+      "description": "Description for product 10",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": true
+    },
+    {
+      "id": 11,
+      "name": "Product 11",
+      "price": 20.0,
+      "description": "Description for product 11",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": true
+    },
+    {
+      "id": 12,
+      "name": "Product 12",
+      "price": 14.75,
+      "description": "Description for product 12",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": true
+    },
+    {
+      "id": 13,
+      "name": "Product 13",
+      "price": 16.99,
+      "description": "Description for product 13",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": false
+    },
+    {
+      "id": 14,
+      "name": "Product 14",
+      "price": 21.5,
+      "description": "Description for product 14",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": true
+    },
+    {
+      "id": 15,
+      "name": "Product 15",
+      "price": 19.2,
+      "description": "Description for product 15",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": true
+    },
+    {
+      "id": 16,
+      "name": "Product 16",
+      "price": 10.5,
+      "description": "Description for product 16",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": true
+    },
+    {
+      "id": 17,
+      "name": "Product 17",
+      "price": 12.1,
+      "description": "Description for product 17",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": false
+    },
+    {
+      "id": 18,
+      "name": "Product 18",
+      "price": 14.99,
+      "description": "Description for product 18",
+      "imageUrl": "https://здоровое-питание.рф/upload/iblock/dad/n23bjrnq8dhqombqsmq5y1rm5pgodwa7/lori_0042395116_bigwww-_1_.jpg",
+      "inStock": true
+    }
+  ],
+
+  "user": [
+    {
+      "id": "1",
+      "name": "Test User",
+      "email": "test@example.com",
+      "isLoggedIn": true
+    },
+    {
+      "id": "2",
+      "name": "Test User2",
+      "email": "test2@example.com",
+      "isLoggedIn": true
+    }
+  ]
+}

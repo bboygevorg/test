@@ -26,8 +26,8 @@ export const store = configureStore({
   },
 
   // middleware по умолчанию + logger
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(loggerMiddleware),
+  // middleware: (getDefaultMiddleware) =>
+  //   getDefaultMiddleware().concat(loggerMiddleware),
 });
 
 store.subscribe(() => {

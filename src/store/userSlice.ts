@@ -19,21 +19,41 @@ const initialState: UserState = {
   error: null,
 };
 
-const fakeLoginApi = (email: string, password: string): Promise<User> => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (email === "test@example.com" && password === "password") {
-        resolve({
-          id: "1",
-          name: "Test User",
-          email,
-          isLoggedIn: true,
-        });
-      } else {
-        reject(new Error("Неверный email или пароль"));
-      }
-    }, 1000);
-  });
+// const fakeLoginApi = (email: string, password: string): Promise<User> => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (email === "test@example.com" && password === "password") {
+//         resolve({
+//           id: "1",
+//           name: "Test User",
+//           email,
+//           isLoggedIn: true,
+//         });
+//       } else {
+//         reject(new Error("Неверный email или пароль"));
+//       }
+//     }, 1000);
+//   });
+// };
+
+const fakeLoginApi = async (email: string, password: string): Promise<User> => {
+  const res = await fetch("http://localhost:5000/user");
+  const data = await res.json();
+  const user = data.find(
+    (u: { email: string }) => u.email === email && password === "password"
+  );
+
+  if (user) {
+    console.log("true");
+    return {
+      id: user.id,
+      name: user.name,
+      email,
+      isLoggedIn: true,
+    };
+  } else {
+    throw new Error("Неверный email или пароль");
+  }
 };
 
 export const loginAsync = createAsyncThunk<
