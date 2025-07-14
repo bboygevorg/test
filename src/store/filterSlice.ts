@@ -1,12 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { ProductState } from "./types";
 
-interface FilterState {
-  search: string;
-  sort: "name" | "price";
-  page: number;
-}
-
-const initialState: FilterState = {
+const initialState: ProductState["filter"] = {
   search: "",
   sort: "name",
   page: 1,

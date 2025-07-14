@@ -1,13 +1,22 @@
-import { Product } from "../store/types";
+import { Product, ProductState } from "../store/types";
 
-export const fetchProductsAPI = async (): Promise<Product[]> => {
+export const fetchProductsAPI = async ({
+  search,
+  sort,
+  page,
+}: ProductState["filter"]): Promise<{
+  data: Product[];
+  totalCount: number;
+}> => {
   const res = await fetch(
-    // "https://686429dd88359a373e97b05e.mockapi.io/products"
-    "http://localhost:5000/products"
+    `http://localhost:5000/products?q=${search}&_sort=${sort}&_page=${page}&_limit=10`
   );
   if (!res.ok) {
     throw new Error("Ошибка загрузки продуктов");
   }
+  const totalCount = Number(res.headers.get("x-total-count"));
 
-  return res.json();
+  const data = await res.json();
+
+  return { data, totalCount };
 };

@@ -9,7 +9,7 @@ import { Product } from "../store/types";
 
 const ProductsList: React.FC = () => {
   const dispatch = useAppDispatch();
-  const product = useAppSelector(selectFilteredProducts);
+  const products = useAppSelector(selectFilteredProducts);
   const [editongProduct, setEditingProduct] = useState<Product | null>(null);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const ProductsList: React.FC = () => {
     <div>
       <h2>Products</h2>
       <ul style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-        {product.map((product) => (
+        {products.map((product) => (
           <li
             key={product.id}
             style={{ border: "1px solid #ccc", padding: "10px", width: 200 }}

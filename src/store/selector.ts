@@ -2,7 +2,7 @@ import { createSelector } from "reselect";
 import { RootState } from "./store";
 
 export const selectProducts = (state: RootState) => state.products.items;
-export const selectFilter = (state: RootState) => state.filter;
+export const selectFilter = (state: RootState) => state.products.filter;
 
 export const selectFilteredProducts = createSelector(
   [selectProducts, selectFilter],
